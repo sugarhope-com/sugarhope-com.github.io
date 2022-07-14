@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>个人成绩</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/templatemo_style.css">
+    <link rel="icon" href="./picture/favicon.ico">
+    <script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script>
+    fetch('https://v1.hitokoto.cn')
+        .then(function (res){
+        return res.json();
+        })
+        .then(function (data) {
+        var hitokoto = document.getElementById('hitokoto');
+        hitokoto.innerText = data.hitokoto;
+        })
+        .catch(function (err) {
+        console.error(err);
+        })
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        div {
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        table, tr, td, th {
+            text-align: center;
+            border: 1px solid gray;
+            border-collapse: collapse;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        tr:nth-child(2n) {
+            background-color: rgba(88, 73, 65, 0.18);
+        }
+
+        tr:hover {
+            background-color: rgb(255, 235, 149);
+        }
+
+        #tt {
+            text-align: right;
+            padding-right: 20px;
+        }
+
+
+    </style>
+</head>
+
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+
+<header class="site-header container animated fadeInDown">
+	<div class="header-wrapper"></div>
+    <div><h4><a href="../index.html">首页</a></h4></div>
+    <div>
+        <p class="power">© 2022 Powered By
+            <a href="https://space.bilibili.com/689915465" target="_blank">是南辞呀mua</a>
+        </p>
+    </div>
+</header>
+<div id="menu-container">
+            <div>
+                <table>
+                    <h3>2021级计算机网络应用成绩表</h3>
+                    <table>
+                        <tr>
+                            <th>学号</th>
+                            <th>科目</th>
+                            <th>平时成绩</th>
+                            <th>成绩</th>
+                        </tr>
+                        <tr>
+                            <td>2333</td>
+                            <td>Photoshop图像处理</td>
+                            <td>60</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>2333</td>
+                            <td>Windows 10系统操作</td>
+                            <td>95</td>
+                            <td>97</td>
+                        </tr>
+                        <tr>
+                            <td>2333</td>
+                            <td>德育1</td>
+                            <td>100</td>
+                            <td>77</td>                           
+                        </tr>
+                        <tr>
+                            <td>2333</td>
+                            <td>计算机⽹络基础</td>
+                            <td>100</td>
+                            <td>100</td>  
+                        </tr>
+                        <tr>
+                            <td>2333</td>
+                            <td>历史</td>
+                            <td>90</td>
+                            <td>85</td>
+                        </tr>
+                        <tr>
+                            <td>2333</td>
+                            <td>中国⾼技能⼈才楷模事迹</td>
+                            <td>100</td>
+                            <td>91</td>
+                        </tr>
+                        <tr>
+                            <td>2333</td>
+                            <td>中国特⾊社会主义理论</td>
+                            <td>100</td>
+                            <td>86</td>
+                        </tr>
+                        <tr>
+                            <td>2333</td>
+                            <td>计算机应⽤基础</td>
+                            <td>95</td>
+                            <td>95</td>
+                        </tr>
+                        <tr>
+                            <td>2333</td>
+                            <td>体育</td>
+                            <td>87</td>
+                            <td>87</td>
+                        </tr>
+                        </tr>
+                        <tr>
+                            <td id="tt" colspan="5">总计：9科，平均分：89.9</td>
+                        </tr>
+                    </table>
+                </table>
+            </div>
+</div>
+<span class="border-top"></span>
+<span class="border-left"></span>
+<span class="border-right"></span>
+<span class="border-bottom"></span>
+</body>
+</html>
